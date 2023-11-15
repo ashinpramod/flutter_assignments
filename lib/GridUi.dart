@@ -44,7 +44,7 @@ class Grid2 extends StatelessWidget {
                         icon[index],
                         size: 60,
                       ),
-                      Column(
+                    const  Column(
                         mainAxisAlignment: MainAxisAlignment.center,
                         crossAxisAlignment: CrossAxisAlignment.start,
                         children: [
@@ -52,7 +52,7 @@ class Grid2 extends StatelessWidget {
                             "Heart",
                             style: TextStyle(fontSize: 25),
                           ),
-                          Text(
+                         Text(
                             "Shaker",
                             style: TextStyle(fontSize: 25),
                           ),
