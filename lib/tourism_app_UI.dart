@@ -55,6 +55,7 @@ class Tourism extends StatelessWidget {
                     ),
                   ))).toList()),
     );
+
   }
 
   void gotodetails(BuildContext context, id) {

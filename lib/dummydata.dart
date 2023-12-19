@@ -36,4 +36,5 @@ List<Map<String, dynamic>> Places = [
     "place":
         "England is a country that is part of the United Kingdom. It shares land borders with Wales to its west and Scotland to its north, while Ireland is located across the Irish Sea to its west and northwest, and the Celtic Sea lies to its southwest."
   }
+
 ];
