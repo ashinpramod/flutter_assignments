@@ -59,5 +59,6 @@ class Tourism extends StatelessWidget {
 
   void gotodetails(BuildContext context, id) {
     Navigator.pushNamed(context, "details", arguments: id);
+
   }
 }

@@ -78,6 +78,7 @@ class Place_Details extends StatelessWidget {
             minWidth: 300,
             height: 60,
             shape: StadiumBorder(),
+
           )
         ],
       ),
