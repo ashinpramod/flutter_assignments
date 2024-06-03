@@ -22,7 +22,8 @@ class _SharedLoginState extends State<SharedLogin> {
   final uname_ctrl = TextEditingController();
   final pwd_ctrl = TextEditingController();
   late bool loggedin;
-  bool showpwd=true;
+  bool showpwd = true;
+
   @override
   void initState() {
     check_user_loggedin();
@@ -30,7 +31,9 @@ class _SharedLoginState extends State<SharedLogin> {
   }
 
   void check_user_loggedin() async {
-    final SharedPreferences preferences = await SharedPreferences.getInstance()!;
+    final SharedPreferences preferences = await SharedPreferences
+        .getInstance()!;
+
     /// if first statement is null execute second statement
     loggedin = preferences.getBool("loggedin") ?? false;
     if (loggedin == true) {
@@ -51,7 +54,7 @@ class _SharedLoginState extends State<SharedLogin> {
               "Login",
               style: GoogleFonts.lato(
                 fontSize: 50,
-                color: Colors.red,
+                color: Colors.blue,
                 fontStyle: FontStyle.italic,
               ),
             ),
@@ -72,7 +75,7 @@ class _SharedLoginState extends State<SharedLogin> {
           Padding(
             padding: const EdgeInsets.all(8.0),
             child: TextField(
-              controller: uname_ctrl,style: GoogleFonts.lato(
+              controller: uname_ctrl, style: GoogleFonts.lato(
               fontSize: 20,
               color: Colors.black,
               fontStyle: FontStyle.italic,),
@@ -84,10 +87,11 @@ class _SharedLoginState extends State<SharedLogin> {
           Padding(
             padding: const EdgeInsets.all(8.0),
             child: TextField(
-              controller: pwd_ctrl,style: GoogleFonts.lato(
-              fontSize: 20,
-              color: Colors.black,
-              fontStyle: FontStyle.italic,),
+              controller: pwd_ctrl,
+              style: GoogleFonts.lato(
+                fontSize: 20,
+                color: Colors.black,
+                fontStyle: FontStyle.italic,),
               obscureText: showpwd,
               obscuringCharacter: '*',
               decoration: InputDecoration(
@@ -111,11 +115,8 @@ class _SharedLoginState extends State<SharedLogin> {
           Padding(
             padding: const EdgeInsets.all(8.0),
             child: ElevatedButton(
-                onPressed: ()
-                {
+                onPressed: () {
                   validate_login();
-
-
                 },
                 child: Text(
                   "Login",
@@ -127,7 +128,7 @@ class _SharedLoginState extends State<SharedLogin> {
                 ),
                 style: const ButtonStyle(
                   backgroundColor:
-                  MaterialStatePropertyAll<Color>(Colors.red),
+                  MaterialStatePropertyAll<Color>(Colors.blue),
                 )),
           ),
 
@@ -140,7 +141,8 @@ class _SharedLoginState extends State<SharedLogin> {
               Navigator.of(context).push(MaterialPageRoute(
                   builder: (context) => SharedSignup()));
             },
-            child:  Text("Dont have an account? Register Here",style: GoogleFonts.lato(
+            child: Text(
+              "Dont have an account? Register Here", style: GoogleFonts.lato(
               fontSize: 20,
               color: Colors.black,
               fontStyle: FontStyle.italic,
@@ -151,20 +153,19 @@ class _SharedLoginState extends State<SharedLogin> {
     );
   }
 
-  void validate_login()async {
-
-    final SharedPreferences preferences = await SharedPreferences.getInstance()!;
+  void validate_login() async {
+    final SharedPreferences preferences = await SharedPreferences
+        .getInstance()!;
     String username = uname_ctrl.text;
     String password = pwd_ctrl.text;
-    String? uname=preferences.getString("uname");
-    String? paswd=preferences.getString("password");
+    String? uname = preferences.getString("uname");
+    String? paswd = preferences.getString("password");
     if (username == uname && password == paswd) {
       //preferences.setString("uname", username);
       preferences.setBool("loggedin", true);
       Navigator.of(context)
           .push(MaterialPageRoute(builder: (context) => Home()));
     }
-
   }
 
 
