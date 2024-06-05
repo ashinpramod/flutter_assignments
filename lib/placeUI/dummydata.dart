@@ -1,6 +1,5 @@
 List<Map<String, dynamic>> Places = [
   {
-
     "id": "Germany",
     "subimage":
         "https://images.unsplash.com/photo-1501952476817-d7ae22e8ee4e?q=80&w=1169&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
@@ -36,5 +35,4 @@ List<Map<String, dynamic>> Places = [
     "place":
         "England is a country that is part of the United Kingdom. It shares land borders with Wales to its west and Scotland to its north, while Ireland is located across the Irish Sea to its west and northwest, and the Celtic Sea lies to its southwest."
   }
-
 ];
