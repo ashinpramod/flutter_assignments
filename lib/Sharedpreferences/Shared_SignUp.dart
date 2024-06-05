@@ -30,7 +30,7 @@ class _SharedSignupState extends State<SharedSignup> {
                 "Sign Up",
                 style: GoogleFonts.lato(
                   fontSize: 50,
-                  color: Colors.brown,
+                  color: Colors.green,
                   fontStyle: FontStyle.italic,
                 ),
               ),
@@ -120,7 +120,7 @@ class _SharedSignupState extends State<SharedSignup> {
                   ),
                   style: const ButtonStyle(
                     backgroundColor:
-                    MaterialStatePropertyAll<Color>(Colors.brown),
+                    MaterialStatePropertyAll<Color>(Colors.green),
                   )),
             ),
 
